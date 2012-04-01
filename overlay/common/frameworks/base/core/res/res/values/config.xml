@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/*
+** Copyright 2009, The Android Open Source Project
+**
+** Licensed under the Apache License, Version 2.0 (the "License");
+** you may not use this file except in compliance with the License.
+** You may obtain a copy of the License at
+**
+**     http://www.apache.org/licenses/LICENSE-2.0
+**
+** Unless required by applicable law or agreed to in writing, software
+** distributed under the License is distributed on an "AS IS" BASIS,
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+** See the License for the specific language governing permissions and
+** limitations under the License.
+*/
+-->
+
+<!-- These resources are around just to allow their values to be customized
+     for different hardware and product builds. -->
+<resources>
+
+    <bool name="config_animateScreenLights">true</bool>
+
+    <!-- The duration (in milliseconds) that the radio will scan for a signal
+    when there's no network connection. If the scan doesn't timeout, use zero -->
+    <integer name="config_radioScanningTimeout">1</integer>
+
+    <bool name="config_disableMenuKeyInLockScreen">true</bool>
+
+    <!-- Component name of the service providing network location support. -->
+    <string name="config_networkLocationProvider">com.google.android.location.NetworkLocationProvider</string>
+
+    <!-- Component name of the service providing geocoder API support. -->
+    <string name="config_geocodeProvider">com.google.android.location.GeocodeProvider</string>
+
+    <!-- List of regexpressions describing the interface (if any) that represent tetherable
+         USB interfaces.  If the device doesn't want to support tething over USB this should
+         be empty.  An example would be "usb.*" -->
+    <string-array translatable="false" name="config_tether_usb_regexs">
+        <item>"usb0"</item>
+    </string-array>
+
+
+    <!-- Regex array of allowable upstream ifaces for tethering - for example if you want
+         tethering on a new interface called "foo2" add <item>"foo\\d"</item> to the array -->
+    <string-array translatable="false" name="config_tether_upstream_regexs">
+        <item>"rmnet\\d"</item>
+        <item>"wlan\\d"</item>
+    </string-array>
+
+    <!-- List of regexpressions describing the interface (if any) that represent tetherable
+         Wifi interfaces.  If the device doesn't want to support tethering over Wifi this
+         should be empty.  An example would be "softap.*" -->
+    <string-array translatable="false" name="config_tether_wifi_regexs">
+        <item>"wlap0"</item>
+    </string-array>
+ <!-- Vibrator pattern for feedback about a long screen/key press -->
+    <integer-array name="config_longPressVibePattern">
+        <item>0</item>
+        <item>1</item>
+        <item>20</item>
+        <item>21</item>
+    </integer-array>
+    
+    <!-- Vibrator pattern for feedback about touching a virtual key -->
+    <integer-array name="config_virtualKeyVibePattern">
+        <item>0</item>
+        <item>10</item>
+        <item>20</item>
+        <item>30</item>
+    </integer-array>
+
+    <!-- Vibrator pattern for a very short but reliable vibration for soft keyboard tap -->
+    <integer-array name="config_keyboardTapVibePattern">
+        <item>40</item>
+    </integer-array>
+
+    <!-- Vibrator pattern for feedback about booting with safe mode disabled -->
+    <integer-array name="config_safeModeDisabledVibePattern">
+        <item>0</item>
+        <item>1</item>
+        <item>20</item>
+        <item>21</item>
+    </integer-array>
+
+    <!-- Vibrator pattern for feedback about booting with safe mode disabled -->
+    <integer-array name="config_safeModeEnabledVibePattern">
+        <item>0</item>
+        <item>1</item>
+        <item>20</item>
+        <item>21</item>
+        <item>500</item>
+        <item>600</item>
+    </integer-array>
+
+    <!-- Vibrator pattern for feedback about hitting a scroll barrier -->
+    <integer-array name="config_scrollBarrierVibePattern">
+        <item>0</item>
+        <item>15</item>
+        <item>10</item>
+        <item>10</item>
+    </integer-array>
+
+    <!-- Boolean indicating if we require the use of DUN on mobile for tethering -->
+    <bool translatable="false" name="config_tether_dun_required">false</bool>
+
+    <!-- Vibrator pattern for a very short but reliable vibration for soft keyboard tap -->
+    <integer-array name="config_keyboardTapVibePattern">
+        <item>30</item>
+    </integer-array>
+ <integer-array name="config_autoBrightnessLevels">
+        <item>161</item>
+        <item>320</item>
+        <item>640</item>
+        <item>1280</item>
+        <item>2600</item>
+        <item>5800</item>
+        <item>10000</item>
+    </integer-array>
+
+    <!-- Array of output values for LCD backlight corresponding to the LUX values
+         in the config_autoBrightnessLevels array.  This array should have size one greater
+         than the size of the config_autoBrightnessLevels array.
+         This must be overridden in platform specific overlays -->
+    <integer-array name="config_autoBrightnessLcdBacklightValues">
+        <item>50</item>
+        <item>60</item>
+        <item>80</item>
+        <item>100</item>
+        <item>120</item>
+        <item>160</item>
+        <item>200</item>
+        <item>255</item>
+    </integer-array>
+
+    <!-- Array of output values for button backlight corresponding to the LUX values
+         in the config_autoBrightnessLevels array.  This array should have size one greater
+         than the size of the config_autoBrightnessLevels array.
+         This must be overridden in platform specific overlays -->
+    <integer-array name="config_autoBrightnessButtonBacklightValues">
+	<item>255</item>
+	<item>-1</item>
+	<item>0</item>
+	<item>0</item>
+	<item>0</item>
+	<item>0</item>
+	<item>0</item>
+    </integer-array>
+
+    <!-- Array of output values for keyboard backlight corresponding to the LUX values
+         in the config_autoBrightnessLevels array.  This array should have size one greater
+         than the size of the config_autoBrightnessLevels array.
+         This must be overridden in platform specific overlays -->
+    <integer-array name="config_autoBrightnessKeyboardBacklightValues">
+	<item>0</item>
+	<item>0</item>
+	<item>0</item>
+	<item>0</item>
+	<item>0</item>
+	<item>0</item>
+	<item>0</item>
+    </integer-array>
+    <bool name="config_deskDockEnablesAccelerometer">true</bool>
+
+    <!-- Control whether being in the car dock should enable accelerometer based
+         screen orientation.  This defaults to true because putting a device in
+         a car dock make the accelerometer more a physical input (like a lid). -->
+    <bool name="config_carDockEnablesAccelerometer">true</bool>
+
+    <!-- Set the default wallpaper -->
+    <string name="default_wallpaper_component">com.android.wallpaper/.nexus.NexusWallpaper</string>
+
+</resources>
